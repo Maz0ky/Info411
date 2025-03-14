@@ -6,13 +6,14 @@ function affiche_jeu(source){
 
 
     var img_container = document.createElement("img");
-    img_container.src = "./../img/dress_to_impress.jpg"
+    img_container.src = "../img/dress_to_impress.jpg"
 
     var desc = document.createElement("p");
     desc.textContent = "Jeu TOUT NUL"
 
     var lien = document.createElement("blockquote");
     var lien_jeu = document.createElement("a");
+    lien_jeu.target = "_blank"
     lien_jeu.href = "https://www.roblox.com/fr/games/15101393044/Dress-To-Impress-STYLE-SHOWDOWN"
     var nom_jeu = document.createElement("strong");
     nom_jeu.textContent = "Dress To Impress"
