@@ -6,7 +6,7 @@ function affiche_jeu(source){
 
 
     var img_container = document.createElement("img");
-    img_container.src = "../img/dress_to_impress.jpg"
+    img_container.src = "img/dress_to_impress.jpg"
 
     var desc = document.createElement("p");
     desc.textContent = "Jeu TOUT NUL"
