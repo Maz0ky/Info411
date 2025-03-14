@@ -17,8 +17,9 @@ function affiche_jeu(source){
     lien_jeu.href = "https://www.roblox.com/fr/games/15101393044/Dress-To-Impress-STYLE-SHOWDOWN"
     var nom_jeu = document.createElement("strong");
     nom_jeu.textContent = "Dress To Impress"
+    lien_jeu.appendChild(nom_jeu);
     lien.appendChild(lien_jeu);
-    lien.appendChild(nom_jeu);
+
 
 
     source.appendChild(title);
