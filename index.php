@@ -31,11 +31,6 @@
 
     <div id = main-container>
 
-    <h3>titre jeu en tendance</h3>
-    <p>image insere</p>
-
-    <p>description vite fait </p>
-
     </div>
 
 

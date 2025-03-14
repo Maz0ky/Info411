@@ -1,4 +1,4 @@
-const page = document.getElementById("groot");
+const page = document.getElementById("main-container");
 
 function affiche_jeu(source){
     var title = document.createElement("h2");
@@ -26,3 +26,4 @@ function affiche_jeu(source){
     source.appendChild(lien);
 }
 
+affiche_jeu(page)
