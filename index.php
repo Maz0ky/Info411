@@ -49,6 +49,6 @@
 </div>
 
 
-<script src="js/monscriptquitue.js" defer></script>
+<script src="js/js.js" defer></script>
 </body>
 </html>
