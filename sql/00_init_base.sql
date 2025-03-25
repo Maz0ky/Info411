@@ -1,4 +1,3 @@
-CREATE DATABASE IF NOT EXISTS Info411_projet_roblox;
 USE Info411_projet_roblox;
 
 CREATE TABLE IF NOT EXISTS `Jeux` (
