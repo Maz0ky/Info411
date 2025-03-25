@@ -11,11 +11,6 @@ CREATE TABLE IF NOT EXISTS `Jeux` (
 
 
 
-CREATE TABLE IF NOT EXISTS `Jeux` (
-  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `nom` VARCHAR(200) NOT NULL
-);
-
 CREATE TABLE `type` (
   `nom` varchar(200) NOT NULL
 );
