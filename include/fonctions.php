@@ -19,7 +19,7 @@ if (!mysqli_set_charset($CONNEXION, 'UTF8')) {
     echo 'Erreur au chargement de l\'encodage UTF-8 : ', mysqli_connect_error(), "\n";
 }
 
-$sql = "SELECT id, nom, annee_sortie, nb_joueurs, description FROM jeux";
+$sql = "SELECT id, nom, annee_sortie, nb_joueurs, description, image FROM jeux";
 $result = mysqli_query($CONNEXION, $sql);
 
 $jeux = array();

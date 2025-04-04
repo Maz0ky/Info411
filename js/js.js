@@ -1,33 +1,73 @@
-const page = document.getElementById("main-container");
+fetch('include/fonctions.php')
+  .then(response => response.json())
+  .then(data => {
+    const jeuxContainer = document.getElementById('main-container');  
 
-function affiche_jeu(page, jeu) {
-    var title = document.createElement("h2");
-    title.textContent = jeu.nom;  
-
-    var annee = document.createElement("p");
-    annee.textContent = "Année de sortie : " + jeu.annee_sortie; 
-
-    var nb_joueurs = document.createElement("p");
-    nb_joueurs.textContent = "Nombre de joueurs : " + jeu.nb_joueurs; 
-
-    var desc = document.createElement("p");
-    desc.textContent = "Description : " + jeu.description;  
-
-    page.appendChild(title);
-    page.appendChild(annee);
-    page.appendChild(nb_joueurs);
-    page.appendChild(desc);
-}
+    data.forEach(jeu => {
+      
+      const jeuDiv = document.createElement('div');
+      jeuDiv.classList.add('card');
 
 
-fetch('include/fonctions.php') 
-    .then(response => response.json())
-    .then(jeux => {
-        jeux.forEach(jeu => {
-            affiche_jeu(page, jeu); 
-        });
-    })
-    .catch(error => {
-        console.error('erreur quand on recupere les jeux', error);
+      const img = document.createElement('img');
+      img.src = jeu.image;  
+      img.alt = jeu.nom;    
+
+      
+      const titre = document.createElement('h3');
+      titre.textContent = jeu.nom;
+
+      
+      const desc = document.createElement('p');
+      desc.textContent = jeu.description;
+
+      
+      const details = document.createElement('p');
+      details.classList.add('game-details');
+      details.textContent = `Année de sortie : ${jeu.annee_sortie} | Nombre de joueurs : ${jeu.nb_joueurs}`;
+
+      
+      jeuDiv.appendChild(img);
+      jeuDiv.appendChild(titre);
+      jeuDiv.appendChild(desc);
+      jeuDiv.appendChild(details);
+
+      
+      jeuxContainer.appendChild(jeuDiv);
     });
 
+    // lignes de code pour faire defiler les cartes de jeux (tuto ytb)
+    const checkVisibility = () => {
+      const cards = document.querySelectorAll('.card');
+      const windowHeight = window.innerHeight;
+      const scrollY = window.scrollY;
+
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top + scrollY;
+        if (cardTop < windowHeight + scrollY - 100) {
+          card.classList.add('show');
+        } else {
+          card.classList.remove('show');
+        }
+      });
+    };
+
+    
+    window.addEventListener('scroll', checkVisibility);
+
+    
+    checkVisibility();
+
+    // fixe le zoom de l'image car css bizarre avec les img
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        card.querySelector('img').style.transform = 'scale(1)'; 
+      });
+      card.addEventListener('mouseleave', function() {
+        card.querySelector('img').style.transform = 'scale(1)'; 
+      });
+    });
+  })
+  .catch(error => {
+    console.error('Erreur lors de la récupération des jeux:', error);
+  });

@@ -1,4 +1,190 @@
-h1{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    background-image: url('../image/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;  
+    background-repeat: no-repeat;
+}
+
+
+h1 {
     text-align: center;
-    color: navy;
+    margin-top: 20px;
+    margin: 40px 0;
+    color: #333;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    color: rgb(150, 150, 255);
+    text-decoration-color: rgb(255, 255, 255); 
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+#cat-gif {
+    position: absolute; 
+    top: 0px; 
+    left: 130px; 
+    width: 220px; 
+    height: auto;
+    z-index: 10; 
+}
+
+#baconhair-img {
+    position: absolute; 
+    top: 0px; 
+    right: 140px; 
+    width: 170px; 
+    height: auto;
+    z-index: 10; 
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Déplace l'élément vers le haut au début */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* L'élément arrive à sa position finale */
+    }
+}
+
+
+#main-nav {
+    background-color: #333333;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-top: 110px;
+}
+
+#main-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#main-menu li {
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#main-menu li:hover {
+    border-radius: 7px;
+    background-color: rgba(112, 80, 218, 0.8);
+    transform: scale(1.1);
+}
+
+
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#content-menu {
+    cursor: pointer;
+}
+
+
+#main-nav {
+    border-radius: 7px;
+    background-color: rgba(52, 17, 167, 0.8);
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+
+
+#main-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 30px; 
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1000px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.card + .card { /* signifie l'espace entre chaque carte incr */
+    margin-top: 40px; 
+}
+
+
+.card:hover {
+    box-shadow: 0 0 100px rgba(81, 43, 205, 0.8);
+    transform:  scale(1.02);  
+    transition: all 0.3s ease-out; 
+}
+
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    max-height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin-top: 10px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.card:hover h3 {
+    color: royalblue;  
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.card .game-details {
+    font-size: 1rem;
+    color: #999;
 }
