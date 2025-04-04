@@ -8,8 +8,12 @@ services:
       - MARIADB_ROOT_PASSWORD=admin+
     ports:
       - 3306:3306
+    volumes:
+      - /Users/clement.veurrier/INFO411/TD6/db_data:/var/lib/mysql
   monapache:
     image: sniipzouille/monapache
+    volumes:
+      - .:/var/www/html
     ports:
       - 80:80
   phpmyadmin:
