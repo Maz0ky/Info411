@@ -15,12 +15,12 @@ services:
     volumes:
       - .:/var/www/html
     ports:
-      - ${PORT_SITE}:80
+      - "${PORT_SITE}:80"
   phpmyadmin:
     image: phpmyadmin
     environment:
       - PMA_HOST=mariadb
     ports:
-      - ${PORT_PHPMYADMIN}:80
+      - "${PORT_PHPMYADMIN}:80"
   monubuntu:
     image: sniipzouille/monubuntu

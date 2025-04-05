@@ -9,11 +9,11 @@
     <link rel="website icon" href="image/emoji.png" type="png">
 </head>
 <body>
-<h1>
+<div class="titre">
     <img src="image/cat.gif" id="cat-gif">    
-    TOP ROBLOX GAMES 
+    <h1> TOP ROBLOX GAMES </h1>
     <img src="image/baconhair.webp" id="baconhair-img">
-</h1>
+</div>
 
 <div id="wrapper">
 
