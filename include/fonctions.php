@@ -2,16 +2,16 @@
 
 require('../connect.php');
 
-$CONNEXION = mysqli_connect ("mariadb",MARIADB_USER,MARIADB_PASSWORD,MARIADB_DATABASE);
+$CONNEXION = mysqli_connect ($host,$user,$pass,$dbname);
 //Connexion au serveur de bases de données
 if (mysqli_connect_errno()) {
-    echo 'Désolé, connexion au serveur ' . MARIADB_DATABASE . ' impossible, '. mysqli_connect_error(), "\n";
+    echo 'Désolé, connexion au serveur ' . $dbname . ' impossible, '. mysqli_connect_error(), "\n";
     exit();
 }
 // Sélection de la base de données
-mysqli_select_db($CONNEXION, MARIADB_DATABASE);
+mysqli_select_db($CONNEXION, $dbname);
 if (mysqli_connect_errno()) {
-    echo 'Désolé, accès à la base ' . MARIADB_DATABASE . ' impossible, '. mysqli_connect_error(), "\n";
+    echo 'Désolé, accès à la base ' . $dbname . ' impossible, '. mysqli_connect_error(), "\n";
     exit();
 }
 // Spécification de l'encodage UTF-8 pour dialoguer avec la BD
