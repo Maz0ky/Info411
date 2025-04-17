@@ -11,7 +11,7 @@
 <body>
 <div class="titre">
     <img src="image/cat.gif" id="cat-gif">    
-    <h1> TOYPO ROBLOX GAMES </h1>
+    <h1> TOYPOr ROBLOX GAMES </h1>
     <img src="image/baconhair.webp" id="baconhair-img">
 </div>
 
