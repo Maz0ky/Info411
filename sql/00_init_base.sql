@@ -1,4 +1,4 @@
-USE Info411_projet_roblox;
+USE info411_projet_roblox;
 
 CREATE TABLE IF NOT EXISTS `Jeux` (
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

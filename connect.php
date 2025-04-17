@@ -15,4 +15,3 @@ $dbname = getenv('NOM_BD');
 $user = getenv('UTILISATEUR_BD');
 $pass = getenv('MDP_BD');
 $passroot = getenv('MDP_ROOT'); 
-
