@@ -18,5 +18,4 @@ jobs:
                   - name: SSH into Server and Deploy
                     run: |
                       ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-                      "cd ${{ secrets.WORKDIR }} && \
-                      git pull
+                      "cd ${{ secrets.WORKDIR }} && git pull"
