@@ -11,7 +11,7 @@ services:
     volumes:
       - /Users/clement.veurrier/INFO411/TD6/db_data:/var/lib/mysql
   monapache:
-    image: mazOk/monapache
+    image: maz0k/monapache
     volumes:
       - .:/var/www/html
     ports:
