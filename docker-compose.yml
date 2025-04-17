@@ -11,16 +11,16 @@ services:
     volumes:
       - /Users/clement.veurrier/INFO411/TD6/db_data:/var/lib/mysql
   monapache:
-    image: sniipzouille/monapache
+    image: mazOk/monapache
     volumes:
       - .:/var/www/html
     ports:
-      - "${PORT_SITE}:80"
+      - 2005:80
   phpmyadmin:
     image: phpmyadmin
     environment:
       - PMA_HOST=mariadb
     ports:
-      - "${PORT_PHPMYADMIN}:80"
+      - 8081:80
   monubuntu:
     image: sniipzouille/monubuntu
