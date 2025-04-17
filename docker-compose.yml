@@ -10,6 +10,7 @@ services:
       - 3306:3306
     volumes:
       - /Users/clement.veurrier/INFO411/TD6/db_data:/var/lib/mysql
+      - ./db_backup:/db_backup
   monapache:
     image: maz0k/monapache
     volumes:
